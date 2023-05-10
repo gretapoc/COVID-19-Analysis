@@ -64,7 +64,7 @@ The file contains 184 819 observations and 14 variables.
 
 ## SQL Queries
 
-**To view the full R code for this project, [click here](https://github.com/gretapoc/COVID-19-Analysis-And-Visualizations/blob/main/COVID-19%20Analysis.sql).**
+**To view the full SQL code for this project, [click here](https://github.com/gretapoc/COVID-19-Analysis-And-Visualizations/blob/main/COVID-19%20Analysis.sql).**
 
 **Viewing covid_deaths:**
 ````sql
