@@ -1,5 +1,20 @@
-# COVID-19-Analysis
+# COVID-19-Analysis And Visualization
 
+## 📚 Table of Contents
+- [Introduction](#introduction)
+- [Covid-19 Analysis](#covid-19-analysis)
+  - [Data Review](#data-review)
+  - [SQL Queries](#sql-queries)
+  - [Tableau](#tableau)
+- [Conclusion](#conclusion)
+
+## Introduction
+
+Throughout the past few years, COVID-19 has had a profound impact on individuals and communities worldwide. Unfortunately, numerous individuals have been infected, and countless lives have been lost to this devastating illness. This project aims to examine Covid-19 data both globally and locally, utilizing SQL to analyze the data and Tableau to present visualizations.
+
+## Covid-19 Analysis
+
+### Data Review
 
 Our dataset, sourced from [Our World in Data](https://ourworldindata.org/covid-deaths), contains valuable information on the impact of Covid-19 across the world. To make it more manageable, we have split the dataset into two CSV files. 
 
@@ -42,21 +57,24 @@ The second file, [covid_vaccinations.csv](https://github.com/gretapoc/COVID-19-A
 
 The file contains 184 819 observations and 14 variables.
 
+### SQL Code
 
+Viewing covid_deaths.
 ````sql
 SELECT * 
 FROM covid_deaths
 ORDER BY location, date;
 ````
-![image]()
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%201.PNG)
 
 
+Viewing covid_vaccinations.
 ````sql
 SELECT * 
 FROM covid_vaccinations
 ORDER BY location, date;
 ````
-![image]()
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%202.PNG)
 
 
 Showing likelihood of dying if you contract COVID-19 in every country.
@@ -72,7 +90,7 @@ WHERE continent IS NOT NULL
   AND total_cases IS NOT NULL
 ORDER BY location, date;
 ````
-![image]()
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%203.PNG)
 
 
 The initial COVID-19 case was identified in December 2019 in Wuhan, China, however, the cases were not officially recorded until January 2020. This query showcases the first documented cases of COVID-19 worldwide.
@@ -93,7 +111,7 @@ HAVING MIN(date) = (
 ORDER BY first_case_date;
 ````
 The earliest documented cases of COVID-19 were identified on January 4th, 2020 in China, Germany, and Finland.
-![image]()
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%204.PNG)
 
 
 Showing likelihood of dying if you contract COVID-19 in Lithuania
@@ -108,7 +126,7 @@ FROM covid_deaths
 WHERE location = 'Lithuania'
 ORDER BY date;
 ````
-![image]()
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%205.PNG)
 
 
 Showing the first documented COVID-19 case in Lithuania.
@@ -130,7 +148,7 @@ HAVING MIN(date) = (
 ORDER BY MIN(date);
 ````
 Lithuania's first documented case of COVID-19 was reported on February 28th, 2020.
-![image]()
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%206.PNG)
 
 
 Showing what percentage of population got Covid-19 worldwide.
@@ -145,7 +163,7 @@ FROM covid_deaths
 WHERE continent IS NOT NULL
 ORDER BY location, date;
 ````
-![image]()
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%207.PNG)
 
 
 Showing what percentage of population got Covid-19 in Lithuania.
@@ -160,7 +178,7 @@ FROM covid_deaths
 WHERE location = 'Lithuania'
 ORDER BY 1,2;
 ````
-![image]()
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%208.PNG)
 
 
 Looking at countries with highest infection rate compared to population.
@@ -176,7 +194,7 @@ WHERE continent IS NOT NULL
 GROUP BY location, population
 ORDER BY infection_rate desc;
 ````
-![image]()
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%209.PNG)
 
 
 Looking at Lithuania with highest infection rate compared to population.
@@ -190,7 +208,7 @@ FROM covid_deaths
 WHERE location = 'Lithuania'
 GROUP BY location, population;
 ````
-![image]()
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%2010.PNG)
 
 
 Showing countries with highest death count per population.
@@ -204,7 +222,7 @@ FROM covid_deaths
 WHERE location = 'Lithuania'
 GROUP BY location, population;
 ````
-![image]()
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%2011.PNG)
 
 
 Showing continents with the highest death count per population.
@@ -220,7 +238,7 @@ WHERE continent IS NULL
 GROUP BY location
 ORDER BY total_death_count DESC;
 ````
-![image]()
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%2012.PNG)
 
 
 Looking at global numbers by date.
@@ -235,7 +253,7 @@ WHERE continent IS NOT NULL
 GROUP BY date
 ORDER BY date, total_cases;
 ````
-![image]()
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%2013.PNG)
 
 
 Showing total COVID-19 cases and deaths worldwide.
@@ -248,7 +266,7 @@ FROM covid_deaths
 WHERE continent IS NOT NULL
 ORDER BY total_cases;
 ````
-![image]()
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%2014.PNG)
 
 
 Looking at the relationship between total population and vaccination rates.
@@ -267,7 +285,7 @@ JOIN covid_vaccinations AS cv
 WHERE cd.continent IS NOT NULL
 ORDER BY cd.location, cd.date;
 ````
-![image]()
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%2015.PNG)
 
 
 Looking at the rolling vaccinations in Lithuania
@@ -286,7 +304,7 @@ JOIN covid_vaccinations AS cv
 WHERE cd.location = 'Lithuania'
 ORDER BY cd.location, cd.date;
 ````
-![image]()
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%2016.PNG)
 
 
 Looking at rolling vaccinations and the percentage of vaccinated population
@@ -309,7 +327,7 @@ SELECT *,
   (rolling_vaccinations/population)*100 AS vaccinated_per_pop
 FROM pop_vac;
 ````
-![image]()
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%2017.PNG)
 
 Creating temp table
 ````sql
