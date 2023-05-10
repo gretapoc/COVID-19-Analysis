@@ -8,7 +8,7 @@
 - [COVID-19 Analysis](#covid-19-analysis)
   - [Data Review](#data-review)
   - [SQL Queries](#sql-queries)
-- [COVID-19 Visualizations Using Tableau](#covid-19-visualizations-using-tableau)
+  - [Tableau Visualizations](#tableau-visualizations)
 - [Conclusion](#conclusion)
 
 ## Introduction
@@ -364,7 +364,7 @@ JOIN covid_vaccinations AS cv
   AND cd.date = cv.date
 ````
 
-## COVID-19 Visualizations Using Tableau
+## Tableau Visualizations
 
 ## Conclusion
 
