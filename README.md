@@ -4,7 +4,7 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Covid-19 Analysis](#covid-19-analysis)
+- [COVID-19 Analysis](#covid-19-analysis)
   - [Data Review](#data-review)
   - [SQL Queries](#sql-queries)
   - [Tableau](#tableau)
