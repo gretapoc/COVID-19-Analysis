@@ -7,7 +7,7 @@
 - [COVID-19 Analysis](#covid-19-analysis)
   - [Data Review](#data-review)
   - [SQL Queries](#sql-queries)
-  - [Tableau](#tableau)
+- [Tableau Visualization](#tableau-visualization)
 - [Conclusion](#conclusion)
 
 ## Introduction
@@ -61,9 +61,9 @@ The second file, [covid_vaccinations.csv](https://github.com/gretapoc/COVID-19-A
 
 The file contains 184 819 observations and 14 variables.
 
-### SQL Code
+### SQL Queries
 
-**Viewing covid_deaths.**
+**Viewing covid_deaths:**
 ````sql
 SELECT * 
 FROM covid_deaths
@@ -72,7 +72,7 @@ ORDER BY location, date;
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%201.PNG)
 
 
-Viewing covid_vaccinations.
+**Viewing covid_vaccinations:**
 ````sql
 SELECT * 
 FROM covid_vaccinations
@@ -81,7 +81,7 @@ ORDER BY location, date;
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%202.PNG)
 
 
-Showing likelihood of dying if you contract COVID-19 in every country.
+**Showing likelihood of dying if you contract COVID-19 in every country:**
 ````sql
 SELECT 
   location, 
@@ -97,7 +97,7 @@ ORDER BY location, date;
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%203.PNG)
 
 
-The initial COVID-19 case was identified in December 2019 in Wuhan, China, however, the cases were not officially recorded until January 2020. This query showcases the first documented cases of COVID-19 worldwide.
+**The initial COVID-19 case was identified in December 2019 in Wuhan, China, however, the cases were not officially recorded until January 2020. This query showcases the first documented cases of COVID-19 worldwide:**
 ````sql
 SELECT 
   location, 
@@ -118,7 +118,7 @@ The earliest documented cases of COVID-19 were identified on January 4th, 2020 i
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%204.PNG)
 
 
-Showing likelihood of dying if you contract COVID-19 in Lithuania
+**Showing likelihood of dying if you contract COVID-19 in Lithuania:**
 ````sql
 SELECT 
   location, 
@@ -133,7 +133,7 @@ ORDER BY date;
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%205.PNG)
 
 
-Showing the first documented COVID-19 case in Lithuania.
+**Showing the first documented COVID-19 case in Lithuania:**
 ````sql
 SELECT 
   location, 
@@ -155,7 +155,7 @@ Lithuania's first documented case of COVID-19 was reported on February 28th, 202
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%206.PNG)
 
 
-Showing what percentage of population got Covid-19 worldwide.
+**Showing what percentage of population got Covid-19 worldwide:**
 ````sql
 SELECT 
   location, 
@@ -170,7 +170,7 @@ ORDER BY location, date;
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%207.PNG)
 
 
-Showing what percentage of population got Covid-19 in Lithuania.
+**Showing what percentage of population got Covid-19 in Lithuania:**
 ````sql
 SELECT 
   location, 
@@ -185,7 +185,7 @@ ORDER BY 1,2;
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%208.PNG)
 
 
-Looking at countries with highest infection rate compared to population.
+**Looking at countries with highest infection rate compared to population:**
 ````sql
 SELECT 
   location, 
@@ -201,7 +201,7 @@ ORDER BY infection_rate desc;
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%209.PNG)
 
 
-Looking at Lithuania with highest infection rate compared to population.
+**Looking at Lithuania with highest infection rate compared to population:**
 ````sql
 SELECT 
   location, 
@@ -215,7 +215,7 @@ GROUP BY location, population;
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%2010.PNG)
 
 
-Showing countries with highest death count per population.
+**Showing countries with highest death count per population:**
 ````sql
 SELECT 
   location, 
@@ -229,7 +229,7 @@ GROUP BY location, population;
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%2011.PNG)
 
 
-Showing continents with the highest death count per population.
+**Showing continents with the highest death count per population:**
 ````sql
 SELECT 
   location, 
@@ -245,7 +245,7 @@ ORDER BY total_death_count DESC;
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%2012.PNG)
 
 
-Looking at global numbers by date.
+**Looking at global numbers by date:**
 ````sql
 SELECT 
   date,
@@ -260,7 +260,7 @@ ORDER BY date, total_cases;
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%2013.PNG)
 
 
-Showing total COVID-19 cases and deaths worldwide.
+**Showing total COVID-19 cases and deaths worldwide:**
 ````sql
 SELECT
   SUM(new_cases) AS total_cases, 
@@ -273,7 +273,7 @@ ORDER BY total_cases;
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%2014.PNG)
 
 
-Looking at the relationship between total population and vaccination rates.
+**Looking at the relationship between total population and vaccination rates:**
 ````sql
 SELECT 
   cd.continent,
@@ -292,7 +292,7 @@ ORDER BY cd.location, cd.date;
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%2015.PNG)
 
 
-Looking at the rolling vaccinations in Lithuania
+**Looking at the rolling vaccinations in Lithuania:**
 ````sql
 SELECT 
   cd.continent,
@@ -311,7 +311,7 @@ ORDER BY cd.location, cd.date;
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%2016.PNG)
 
 
-Looking at rolling vaccinations and the percentage of vaccinated population
+**Looking at rolling vaccinations and the percentage of vaccinated population:**
 ````sql
 WITH pop_vac (continent, location, date, population, new_vaccinations, rolling_vaccinations)
 AS
@@ -333,7 +333,7 @@ FROM pop_vac;
 ````
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%2017.PNG)
 
-Creating temp table
+**Creating temp table:**
 ````sql
 DROP TABLE IF EXISTS percent_pop_vaccinated
 CREATE TABLE percent_pop_vaccinated
@@ -347,7 +347,7 @@ CREATE TABLE percent_pop_vaccinated
 )
 ````
 
-Inserting into temp table
+**Inserting into temp table:**
 ````sql
 INSERT INTO percent_pop_vaccinated
 SELECT 
@@ -363,6 +363,8 @@ JOIN covid_vaccinations AS cv
   AND cd.date = cv.date
 ````
 
+## Tableau Visualization
 
+## Conclusion
 
 
