@@ -14,15 +14,15 @@
 
 Throughout the past few years, COVID-19 has had a profound impact on individuals and communities worldwide. Unfortunately, numerous individuals have been infected, and countless lives have been lost to this devastating illness. 
 
-This project aims to examine Covid-19 data both globally and locally, utilizing SQL to analyze the data and Tableau to present visualizations.
+This project aims to examine COVID-19 data both globally and locally, utilizing SQL to analyze the data and Tableau to present visualizations.
 
-## Covid-19 Analysis
+## COVID-19 Analysis
 
 ### Data Review
 
-Our dataset, sourced from [Our World in Data](https://ourworldindata.org/covid-deaths), contains valuable information on the impact of Covid-19 across the world. To make it more manageable, we have split the dataset into two CSV files. 
+Our dataset, sourced from [Our World in Data](https://ourworldindata.org/covid-deaths), contains valuable information on the impact of COVID-19 across the world. To make it more manageable, we have split the dataset into two CSV files. 
 
-The first file, [covid_deaths.csv](https://github.com/gretapoc/COVID-19-Analysis/blob/main/covid_deaths.csv), provides indicators on Covid-19 cases worldwide from January 3, 2020 to January 3, 2022. 
+The first file, [covid_deaths.csv](https://github.com/gretapoc/COVID-19-Analysis/blob/main/covid_deaths.csv), provides indicators on COVID-19 cases worldwide from January 3, 2020 to January 3, 2022. 
 
 | Variable	 | Description | 
 | ------- | ----------- |
@@ -155,7 +155,7 @@ Lithuania's first documented case of COVID-19 was reported on February 28th, 202
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%206.PNG)
 
 
-**Showing what percentage of population got Covid-19 worldwide:**
+**Showing what percentage of population got COVID-19 worldwide:**
 ````sql
 SELECT 
   location, 
@@ -170,7 +170,7 @@ ORDER BY location, date;
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code%207.PNG)
 
 
-**Showing what percentage of population got Covid-19 in Lithuania:**
+**Showing what percentage of population got COVID-19 in Lithuania:**
 ````sql
 SELECT 
   location, 
