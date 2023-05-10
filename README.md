@@ -1,4 +1,4 @@
-# COVID-19-Analysis And Visualization
+# COVID-19 Analysis And Visualizations
 ### Greta Pocevičiūtė
 
 ![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/covid19.jpg)
