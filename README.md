@@ -19,7 +19,7 @@ This project aims to examine COVID-19 data both globally and locally, utilizing 
 
 ## COVID-19 Analysis
 
-### Data Review
+## Data Review
 
 Our dataset, sourced from [Our World in Data](https://ourworldindata.org/covid-deaths), contains valuable information on the impact of COVID-19 across the world. To make it more manageable, we have split the dataset into two CSV files. 
 
@@ -62,7 +62,7 @@ The second file, [covid_vaccinations.csv](https://github.com/gretapoc/COVID-19-A
 
 The file contains 184 819 observations and 14 variables.
 
-### SQL Queries
+## SQL Queries
 
 **Viewing covid_deaths:**
 ````sql
