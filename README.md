@@ -1,7 +1,6 @@
 # COVID-19-Analysis And Visualization
 
-![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/covid-illustration.png | width=200)
-
+<img src="https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/covid-illustration.png" width="250"/>
 
 ## 📚 Table of Contents
 - [Introduction](#introduction)
