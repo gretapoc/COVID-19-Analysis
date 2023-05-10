@@ -63,7 +63,7 @@ The file contains 184 819 observations and 14 variables.
 
 ### SQL Code
 
-Viewing covid_deaths.
+**Viewing covid_deaths.**
 ````sql
 SELECT * 
 FROM covid_deaths
