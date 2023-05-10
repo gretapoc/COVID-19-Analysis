@@ -1,5 +1,7 @@
 # COVID-19-Analysis And Visualization
 
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/covid19.jpg)
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Covid-19 Analysis](#covid-19-analysis)
