@@ -52,11 +52,9 @@ The file contains 184 819 observations and 20 variables.
 SELECT * 
 FROM covid_deaths
 ORDER BY location, date;
-
-SELECT * 
-FROM covid_vaccinations
-ORDER BY location, date;
 ````
+
+
 
 ![image]()
 
@@ -64,7 +62,7 @@ ORDER BY location, date;
 
 ````sql
 SELECT * 
-FROM covid_deaths
+FROM covid_vaccinations
 ORDER BY location, date;
 ````
 
@@ -72,7 +70,85 @@ ORDER BY location, date;
 
 
 ````sql
-SELECT * 
+SELECT 
+	location, 
+	date, 
+	total_cases, 
+	total_deaths, 
+	ROUND((total_deaths/total_cases)*100, 2) AS death_rate
 FROM covid_deaths
+WHERE continent IS NOT NULL
+	AND total_cases IS NOT NULL
 ORDER BY location, date;
 ````
+
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code1.PNG)
+
+
+
+
+
+````sql
+SELECT 
+	location, 
+	MIN(date) AS first_case_date, 
+	total_cases
+FROM covid_deaths
+WHERE total_cases > 0 
+	AND continent IS NOT NULL
+GROUP BY location, total_cases
+HAVING MIN(date) = (
+	SELECT MIN(date)
+	FROM covid_deaths
+	WHERE total_cases > 0
+)
+ORDER BY first_case_date;
+````
+
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code2.PNG)
+
+
+
+
+
+````sql
+SELECT 
+	location, 
+	date, 
+	total_cases, 
+	total_deaths, 
+	ROUND((total_deaths/total_cases)*100, 2) AS death_rate
+FROM covid_deaths
+WHERE location = 'Lithuania'
+ORDER BY date;
+````
+
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code3.PNG)
+
+
+
+````sql
+SELECT 
+	location, 
+	MIN(date) AS first_case_date, 
+	total_cases
+FROM covid_deaths
+WHERE total_cases > 0
+	AND location = 'Lithuania'
+GROUP BY location, total_cases
+HAVING MIN(date) = (
+	SELECT MIN(date)
+	FROM covid_deaths
+	WHERE total_cases > 0
+	AND location = 'Lithuania'
+)
+ORDER BY MIN(date);
+````
+
+![image](https://github.com/gretapoc/COVID-19-Analysis/blob/main/pictures/code4.PNG)
+
+
+
+
+
+
