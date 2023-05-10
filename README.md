@@ -12,7 +12,9 @@
 
 ## Introduction
 
-Throughout the past few years, COVID-19 has had a profound impact on individuals and communities worldwide. Unfortunately, numerous individuals have been infected, and countless lives have been lost to this devastating illness. This project aims to examine Covid-19 data both globally and locally, utilizing SQL to analyze the data and Tableau to present visualizations.
+Throughout the past few years, COVID-19 has had a profound impact on individuals and communities worldwide. Unfortunately, numerous individuals have been infected, and countless lives have been lost to this devastating illness. 
+
+This project aims to examine Covid-19 data both globally and locally, utilizing SQL to analyze the data and Tableau to present visualizations.
 
 ## Covid-19 Analysis
 
