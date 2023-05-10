@@ -5,8 +5,6 @@ Our dataset, sourced from [Our World in Data](https://ourworldindata.org/covid-d
 
 The first file, [covid_deaths.csv](https://github.com/gretapoc/COVID-19-Analysis/blob/main/covid_deaths.csv), provides indicators on Covid-19 cases worldwide from January 3, 2020 to January 3, 2022. 
 
-The file contains 184 819 observations and 11 variables.
-
 | Variable	 | Description | 
 | ------- | ----------- |
 | `iso_code` | 	ISO 3166-1 alpha-3 – three-letter country codes. | 
@@ -21,9 +19,9 @@ The file contains 184 819 observations and 11 variables.
 | `icu_patients` | 	Number of COVID-19 patients in intensive care units (ICUs) on a given day. |
 | `hosp_patients` | Number of COVID-19 patients in hospital on a given day. |
 
-The second file, [covid_vaccinations.csv](https://github.com/gretapoc/COVID-19-Analysis/blob/main/covid_vaccinations.csv), covers the same time period and contains information on COVID-19 testing and vaccination rates. 
+The file contains 184 819 observations and 11 variables.
 
-The file contains 184 819 observations and 20 variables.
+The second file, [covid_vaccinations.csv](https://github.com/gretapoc/COVID-19-Analysis/blob/main/covid_vaccinations.csv), covers the same time period and contains information on COVID-19 testing and vaccination rates. 
 
 | Variable	 | Description | 
 | ------- | ----------- |
@@ -48,6 +46,7 @@ The file contains 184 819 observations and 20 variables.
 | `male_smokers` | Share of men who smoke, most recent year available. |
 | `life_expectancy` | Life expectancy at birth in 2019. |
 
+The file contains 184 819 observations and 20 variables.
 
 ````sql
 SELECT * 
