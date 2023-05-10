@@ -3,7 +3,7 @@
 
 Our dataset, sourced from [Our World in Data](https://ourworldindata.org/covid-deaths), contains valuable information on the impact of Covid-19 across the world. To make it more manageable, we have split the dataset into two CSV files. 
 
-The first file, covid_deaths.csv, provides indicators on Covid-19 cases worldwide from January 3, 2020 to January 3, 2022. 
+The first file, [covid_deaths.csv](https://github.com/gretapoc/COVID-19-Analysis/blob/main/covid_deaths.csv), provides indicators on Covid-19 cases worldwide from January 3, 2020 to January 3, 2022. 
 
 | Variable	 | Description | 
 | ------- | ----------- |
@@ -19,7 +19,7 @@ The first file, covid_deaths.csv, provides indicators on Covid-19 cases worldwid
 | `icu_patients` | 	Number of COVID-19 patients in intensive care units (ICUs) on a given day. |
 | `hosp_patients` | Number of COVID-19 patients in hospital on a given day. |
 
-The second file, covid_vaccinations.csv, covers the same time period and contains information on COVID-19 testing and vaccination rates.
+The second file, [covid_vaccinations.csv](https://github.com/gretapoc/COVID-19-Analysis/blob/main/covid_vaccinations.csv), covers the same time period and contains information on COVID-19 testing and vaccination rates.
 
 | Variable	 | Description | 
 | ------- | ----------- |
@@ -54,7 +54,8 @@ SELECT *
 FROM covid_vaccinations
 ORDER BY location, date;
 ````
-![image](https://user-images.githubusercontent.com/81607668/129737993-710198bd-433d-469f-b5de-14e4022a3a45.png)
+
+![image]()
 
 
 
