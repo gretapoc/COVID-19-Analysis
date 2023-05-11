@@ -5,10 +5,9 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [COVID-19 Analysis](#covid-19-analysis)
-  - [Data Review](#data-review)
-  - [SQL Queries](#sql-queries)
-  - [Tableau Visualizations](#tableau-visualizations)
+- [COVID-19 Data Review](#covid-19-data-review)
+- [SQL Queries](#sql-queries)
+- [Tableau Visualizations](#tableau-visualizations)
 
 ## Introduction
 
@@ -16,9 +15,7 @@ Throughout the past few years, COVID-19 has had a profound impact on individuals
 
 This project aims to examine COVID-19 data both globally and locally, utilizing SQL to analyze the data and Tableau to present visualizations.
 
-## COVID-19 Analysis
-
-## Data Review
+## COVID-19 Data Review
 
 Our dataset, sourced from [Our World in Data](https://ourworldindata.org/covid-deaths), contains valuable information on the impact of COVID-19 across the world. To make it more manageable, we have split the dataset into two CSV files. 
 
