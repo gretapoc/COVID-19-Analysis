@@ -9,7 +9,6 @@
   - [Data Review](#data-review)
   - [SQL Queries](#sql-queries)
   - [Tableau Visualizations](#tableau-visualizations)
-- [Conclusion](#conclusion)
 
 ## Introduction
 
@@ -368,6 +367,9 @@ JOIN covid_vaccinations AS cv
 
 ## Tableau Visualizations
 
-## Conclusion
+The dashboard has been published on [Tableau Public](https://public.tableau.com/app/profile/greta.pocevi.i.t./viz/COVID-19Dashboard_16838156988660/Dashboard1?publish=yes).
+
+![image](https://github.com/gretapoc/COVID-19-Analysis-And-Visualizations/blob/main/pictures/Dashboard%201.png)
+
 
 
