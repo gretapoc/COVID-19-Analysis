@@ -6,7 +6,7 @@
 ## Table of Contents
 - [Introduction](#introduction)
 - [COVID-19 Data Review](#covid-19-data-review)
-- [SQL Queries](#sql-queries)
+- [Data Exploration](#data-exploration)
 - [Tableau Visualizations](#tableau-visualizations)
 
 ## Introduction
@@ -58,7 +58,7 @@ The second file, [covid_vaccinations.csv](https://github.com/gretapoc/COVID-19-A
 
 The file contains 184 819 observations and 14 variables.
 
-## SQL Queries
+## Data Exploration
 
 **To view the full SQL code for this project, [click here](https://github.com/gretapoc/COVID-19-Analysis-And-Visualizations/blob/main/COVID-19%20Analysis.sql).**
 
